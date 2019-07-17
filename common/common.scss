@@ -1,0 +1,33 @@
+/* 0.1 Defaults and typography */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #070f24;
+}
+
+
+/* 10 Discourse specific */
+
+div#main-outlet {
+    background: #f3f4f5 url(/assets/hintergrund_content_integratoren_haupt.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: right -130px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: black;
+}
+
+header {
+    height: 130px;
+    background: rgb(7,15,36) url(/assets/hintergrund_content_integratoren_haupt.svg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
