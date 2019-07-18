@@ -139,6 +139,13 @@ header.d-header {
   color: #fff;
 }
 
+.topic-status-info,
+.post-links-container .post-links,
+.topic-avatar,
+.topic-body {
+  border: none;
+}
+
 /* FIXME: I bet we can do this outside the theme */
 #site-logo {
   display: none;
