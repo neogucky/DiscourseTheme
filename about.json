@@ -3,6 +3,7 @@
   "about_url": "",
   "license_url": "",
   "assets": {
+    "background-image" : "assets/hintergrund_content_integratoren_haupt.svg"
   },
   "color_schemes": {
     "SmartHome": {

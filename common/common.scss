@@ -11,7 +11,7 @@ body {
 /* 10 Discourse specific */
 
 div#main-outlet {
-    background: #f3f4f5 url(/assets/hintergrund_content_integratoren_haupt.svg);
+    background: #f3f4f5 url($background-image);
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: right -130px;
@@ -26,7 +26,7 @@ div#main-outlet {
 
 header {
     height: 130px;
-    background: rgb(7,15,36) url(/assets/hintergrund_content_integratoren_haupt.svg);
+    background: rgb(7,15,36) url($background-image);
     background-position: right top;
     background-repeat: no-repeat;
     background-size: 100% auto;
