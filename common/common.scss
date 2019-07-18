@@ -14,18 +14,19 @@ body {
   position: absolute;
   width: 100%;
   z-index: 100000;
+  background-image: url($background-image);
 }
 
 nav {
   z-index: 10000;
-  margin: 45px auto;
+  margin: 45px auto 34px auto;
 
   ul {
     list-style: none;
     background: transparent;
     overflow: hidden;
     color: #fff;
-    padding: 0 0 0 30px;
+    padding: 0 0 0 160px;
     transition: 1s;
 
     li {
@@ -35,12 +36,8 @@ nav {
   }
 
   #logo {
-    float: left;
-    color: #fff;
-    font-weight: bold;
+    position: fixed;
     font-size: 20px;
-    letter-spacing: 2px;
-    z-index: 9999 !important;
 
     #symcon_logo {
       width: 160px;
@@ -50,6 +47,22 @@ nav {
 
     .cls-sym {
       fill: #fff;
+    }
+  }
+  a {
+    transition: color .5s;
+    &:visited {
+      color: #fff!important;
+      text-decoration: none;
+    }
+    &:hover {
+      color: #417394!important;
+      text-decoration: none;
+    }
+    &.active {
+      color: #fff!important;
+      font-weight: bold;
+      text-decoration: none;
     }
   }
 }
@@ -70,10 +83,6 @@ nav ul li a {
   color: #fff;
   font-size: 15px;
   text-transform: uppercase;
-}
-
-a {
-  transition: color .5s;
 }
 
 #search-ani, .header-icon{
@@ -129,10 +138,11 @@ div#main-outlet {
 header,
 header.d-header {
   height: 130px;
-  background: rgb(7,15,36) url($background-image);
+  background: rgb(7,15,36);
   background-position: right top;
   background-repeat: no-repeat;
   background-size: 100% auto;
+  position: fixed;
 }
 
 .d-header-icons .d-icon {
@@ -146,6 +156,34 @@ header.d-header {
   border: none;
 }
 
+
+a {
+  &:visited {
+    color: rgb(7,15,36)!important;
+    text-decoration: none;
+  }
+  &:hover {
+    color: rgb(7,15,36)!important;
+    text-decoration: none;
+  }
+  &:active {
+    color: rgb(7,15,36)!important;
+    text-decoration: none;
+  }
+}
+
+.extra-info-wrapper {
+  .title-wrapper {
+    color: #fff;
+
+    .topic-statuses .d-icon,
+    .badge-wrapper.bullet span.badge-category,
+    .topic-statuses,
+    .topic-link {
+      color: #fff;
+    }
+  }
+}
 /* FIXME: I bet we can do this outside the theme */
 #site-logo {
   display: none;
