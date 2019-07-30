@@ -13,7 +13,6 @@ body {
 #navWrapper {
   position: absolute;
   width: 100%;
-  z-index: 100000;
   background-image: url($background-image);
 }
 
@@ -115,7 +114,6 @@ nav ul li a.active {
   display:inline;
 }
 
-
 /* 10 Discourse specific */
 
 #main {
@@ -133,6 +131,16 @@ div#main-outlet {
   text-rendering: optimizeLegibility;
   color: black;
   background: rgba(255,255,255,0.5);
+}
+
+#mobile-menu {
+  z-index: 10000;
+  position: relative;
+  margin-right: 200px;
+}
+
+#logo {
+  z-index: 10000;
 }
 
 header,
@@ -155,7 +163,6 @@ header.d-header {
 .topic-body {
   border: none;
 }
-
 
 a {
   &:visited {
@@ -186,6 +193,14 @@ a {
     }
   }
 }
+
+.topic-list .topic-list-item-separator td span {
+  color: #32c9ac;
+}
+.topic-list .topic-list-item-separator td {
+  border-bottom: 1px solid #32c9ac;
+}
+
 /* FIXME: I bet we can do this outside the theme */
 #site-logo {
   display: none;
