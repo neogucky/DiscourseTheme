@@ -13,7 +13,6 @@ body {
 #navWrapper {
   position: absolute;
   width: 100%;
-  background-image: url($background-image);
 }
 
 nav {
@@ -68,7 +67,7 @@ nav {
 
 
 #search-ani:hover, .header-icon:hover a:hover {
-  color:#32c9ac;
+  color:$highlight-color;
   text-decoration: none;
 }
 
@@ -136,14 +135,26 @@ div#main-outlet {
 #mobile-menu>ul {
   z-index: 10000;
   position: relative;
-  margin-right: 200px;
+  margin-right: 100px;
 }
 
 #logo {
-  z-index: 10000;
+  z-index: 1001;
 }
 
-header,
+.alert.alert-info {
+  padding: 10px 15px 12px 55px;
+  border: 1px solid $highlight-color;
+  background: #fff url($info-light) 8px 6px no-repeat;
+  background-size: 32px;
+}
+
+/* Elements that should be in front of logo: */
+.menu-panel,
+#reply-control {
+  z-index: 1002;
+}
+
 header.d-header {
   height: 130px;
   background: rgb(7,15,36);
@@ -151,11 +162,65 @@ header.d-header {
   background-repeat: no-repeat;
   background-size: 100% auto;
   position: fixed;
+  background-image: url($background-image);
+
+  .discourse-tag.simple, .discourse-tag.simple:visited, .discourse-tag.simple:hover {
+    color: #646464!important;
+  }
+
+  .d-header-icons {
+    .d-icon {
+      color: #fff;
+      transition: color .5s;
+      font-size: initial;
+    }
+    .icon:hover,
+    .icon:focus {
+      background: none;
+    }
+    .icon:hover .d-icon {
+      color: #417394 !important;
+    }
+    .icon {
+      padding: 0.2143em 0;
+    }
+    #current-user .icon {
+      padding: 0.2143em;
+    }
+  }
+
+  li.header-dropdown-toggle {
+    display: none;
+  }
+  li.header-dropdown-toggle,
+  #current-user {
+    display: list-item;
+  }
 }
 
-.d-header-icons .d-icon {
-  color: #fff;
+li.additional_rightside_icon {
+  float: right;
+  z-index: 1001;
+  padding-right: 1.4em;
+  padding-left: 0;
+
+  a {
+    align-items: center;
+    justify-content: center;
+    width: 2.2857em;
+    height: 2.2857em;
+    padding: 0.2143em 0;
+    text-decoration: none;
+    cursor: pointer;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    transition: all linear 0.15s;
+    outline: none;
+  }
+
 }
+
 
 .topic-status-info,
 .post-links-container .post-links,
@@ -194,14 +259,36 @@ a {
   }
 }
 
+.nav-pills>li a.active {
+  color: white!important;
+}
+
 .topic-list .topic-list-item-separator td span {
-  color: #32c9ac;
+  color: $highlight-color;
 }
 .topic-list .topic-list-item-separator td {
-  border-bottom: 1px solid #32c9ac;
+  border-bottom: 1px solid $highlight-color;
 }
 
 /* FIXME: I bet we can do this outside the theme */
 #site-logo {
   display: none;
+}
+
+@media only screen and (max-width: 1060px) {
+  #mobile-menu>ul {
+    li {
+      display: none;
+    }
+    li.important {
+      display: inline-block;
+    }
+
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #mobile-menu {
+    display: none;
+  }
 }

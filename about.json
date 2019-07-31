@@ -3,17 +3,18 @@
   "about_url": "",
   "license_url": "",
   "assets": {
-    "background-image" : "assets/hintergrund_content_integratoren_haupt.svg"
+    "background-image" : "assets/hintergrund_content_integratoren_haupt.svg",
+    "info-light" : "assets/info-light.svg"
   },
   "color_schemes": {
-    "SmartHome": {
+    "Symcon": {
       "primary": "333",
       "secondary": "ffffff",
-      "tertiary": "88af8e",
+      "tertiary": "070f24",
       "quaternary": "070f24",
       "header_background": "070f24",
       "header_primary": "333333",
-      "highlight": "d4efd8",
+      "highlight": "32c9ac",
       "danger": "f8745c",
       "success": "41e254",
       "love": "fa6c8d"
